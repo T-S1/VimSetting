@@ -26,18 +26,18 @@ nnoremap j gj
 nnoremap k gk
 
 " 見た目系
+" 256色に対応
+set t_Co=256
+" カラースキームを設定
+colorscheme atom-dark-256
 " 行番号を表示
 set number
-" 通常文字列の文字色を黄色にする
-hi Constant ctermfg=14
 " カーソルラインの設定を初期化
 hi clear CursorLine
 " 現在の行を強調表示
 set cursorline
 " 行末の1文字先までカーソルを移動できるように
 set virtualedit=onemore
-" ビープ音を可視化
-set visualbell
 " 括弧入力時の対応する括弧を表示
 set showmatch
 
@@ -71,6 +71,10 @@ set expandtab
 set tabstop=4
 " 行頭でのTab文字の表示幅
 set shiftwidth=4
+" 改行時に前のインデントを継続
+set autoindent
+" 改行時に前の行の構文から次の行のインデントを決定
+set smartindent
 
 " 検索系
 " 検索文字列入力時に順次対象文字列にヒットさせる
